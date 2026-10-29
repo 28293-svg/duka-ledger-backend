@@ -1,13 +1,18 @@
 package kigali.duka.rw.domain;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "credit_entry")
@@ -34,6 +39,7 @@ public class CreditEntry {
     @JoinColumn(name = "shopkeeper_id")
     private Shopkeeper shopkeeper;
 
+    // Write-only helpers, same idea as Shopkeeper.shopId.
     @Transient
     private UUID customerId;
 
@@ -107,5 +113,4 @@ public class CreditEntry {
     public void setShopkeeperId(UUID shopkeeperId) {
         this.shopkeeperId = shopkeeperId;
     }
-
 }
