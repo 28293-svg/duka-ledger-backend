@@ -1,0 +1,2666 @@
+{
+  "info": {
+    "_postman_id": "37a8cc49-f224-4f5a-ac6f-4da1bd7171de",
+    "name": "duka-ledger-midterm",
+    "description": "DukaLedger midterm - Rugema Bill Gates 28293. Run folder 0 first, then A..F in order.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58554971",
+    "_collection_link": "https://go.postman.co/collection/58554971-37a8cc49-f224-4f5a-ac6f-4da1bd7171de?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "0 Seed data (run once, in order)",
+      "item": [
+        {
+          "name": "Seed product line - Groceries",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Groceries\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/product-lines/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "product-lines",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed product line - Beverages",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Beverages\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/product-lines/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "product-lines",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed product line - Household Goods",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Household Goods\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/product-lines/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "product-lines",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed product line - Airtime",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Airtime\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/product-lines/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "product-lines",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed shop 1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shopNumber\": 1,\n  \"name\": \"Duka Centre\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/shops/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shops",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed shop 2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shopNumber\": 2,\n  \"name\": \"Market Corner\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/shops/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shops",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed shop 3",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shopNumber\": 3,\n  \"name\": \"Station Shop\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/shops/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shops",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed shop 4",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shopNumber\": 4,\n  \"name\": \"Hill Top Shop\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/shops/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shops",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Load ids (1)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });",
+                  "const b = pm.collectionVariables.get('base');",
+                  "const get = (p, f) => pm.sendRequest(b + p, (e, res) => { if (!e) f(res.json()); });",
+                  "const set = (k, v) => pm.collectionVariables.set(k, v);",
+                  "get('/api/product-lines/all', a => a.forEach(x => set('pl_' + x.name.replace(/ /g, '_'), x.id)));",
+                  "get('/api/shops/all', a => a.forEach(x => set('shop' + x.shopNumber, x.id)));",
+                  "get('/api/shopkeepers/all', a => a.forEach(x => set('sk_' + x.phone, x.id)));",
+                  "get('/api/customers/all', a => a.forEach(x => set('cu_' + x.phone, x.id)));",
+                  "get('/api/credit-entries/all', a => a.forEach(x => set(x.items.split(' ')[0].replace('#', 'ce'), x.id)));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shops/all",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shops",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed shopkeeper - Eric Habimana",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Eric\",\n  \"lastName\": \"Habimana\",\n  \"phone\": \"0788111111\",\n  \"shopId\": \"{{shop1}}\",\n  \"productLineIds\": [\n    \"{{pl_Groceries}}\",\n    \"{{pl_Beverages}}\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed shopkeeper - Grace Mukamana",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Grace\",\n  \"lastName\": \"Mukamana\",\n  \"phone\": \"0788222222\",\n  \"shopId\": \"{{shop2}}\",\n  \"productLineIds\": [\n    \"{{pl_Household_Goods}}\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed shopkeeper - Samuel Niyonzima",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Samuel\",\n  \"lastName\": \"Niyonzima\",\n  \"phone\": \"0788333333\",\n  \"shopId\": \"{{shop3}}\",\n  \"productLineIds\": [\n    \"{{pl_Beverages}}\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed customer - Alice Rugema",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Alice\",\n  \"lastName\": \"Rugema\",\n  \"phone\": \"0789012345\",\n  \"village\": \"Kimironko\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/customers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed customer - Jean Rugema",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Jean\",\n  \"lastName\": \"Rugema\",\n  \"phone\": \"0789012346\",\n  \"village\": \"Remera\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/customers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed customer - Claire Uwase",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Claire\",\n  \"lastName\": \"Uwase\",\n  \"phone\": \"0789012347\",\n  \"village\": \"Nyamirambo\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/customers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed customer - Patrick Mugabo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Patrick\",\n  \"lastName\": \"Mugabo\",\n  \"phone\": \"0789012348\",\n  \"village\": \"Kicukiro\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/customers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed customer - Diane Ingabire",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Diane\",\n  \"lastName\": \"Ingabire\",\n  \"phone\": \"0789012349\",\n  \"village\": \"Gikondo\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/customers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Load ids (2)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });",
+                  "const b = pm.collectionVariables.get('base');",
+                  "const get = (p, f) => pm.sendRequest(b + p, (e, res) => { if (!e) f(res.json()); });",
+                  "const set = (k, v) => pm.collectionVariables.set(k, v);",
+                  "get('/api/product-lines/all', a => a.forEach(x => set('pl_' + x.name.replace(/ /g, '_'), x.id)));",
+                  "get('/api/shops/all', a => a.forEach(x => set('shop' + x.shopNumber, x.id)));",
+                  "get('/api/shopkeepers/all', a => a.forEach(x => set('sk_' + x.phone, x.id)));",
+                  "get('/api/customers/all', a => a.forEach(x => set('cu_' + x.phone, x.id)));",
+                  "get('/api/credit-entries/all', a => a.forEach(x => set(x.items.split(' ')[0].replace('#', 'ce'), x.id)));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shops/all",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shops",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 1 (RECORDED)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-10-05\",\n  \"status\": \"RECORDED\",\n  \"items\": \"#1 Rice 5kg and sugar\",\n  \"amount\": 9500,\n  \"customerId\": \"{{cu_0789012345}}\",\n  \"shopkeeperId\": \"{{sk_0788111111}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 2 (OVERDUE)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-10-12\",\n  \"status\": \"OVERDUE\",\n  \"items\": \"#2 Cooking oil 3L\",\n  \"amount\": 7800,\n  \"customerId\": \"{{cu_0789012345}}\",\n  \"shopkeeperId\": \"{{sk_0788111111}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 3 (REPAID)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-10-20\",\n  \"status\": \"REPAID\",\n  \"items\": \"#3 Soap and detergent\",\n  \"amount\": 4500,\n  \"customerId\": \"{{cu_0789012345}}\",\n  \"shopkeeperId\": \"{{sk_0788222222}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 4 (WRITTEN_OFF)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-10-20\",\n  \"status\": \"WRITTEN_OFF\",\n  \"items\": \"#4 Maize flour 10kg\",\n  \"amount\": 12000,\n  \"customerId\": \"{{cu_0789012346}}\",\n  \"shopkeeperId\": \"{{sk_0788111111}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 5 (RECORDED)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-10-20\",\n  \"status\": \"RECORDED\",\n  \"items\": \"#5 Beans 5kg\",\n  \"amount\": 6000,\n  \"customerId\": \"{{cu_0789012346}}\",\n  \"shopkeeperId\": \"{{sk_0788111111}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 6 (RECORDED)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-10-28\",\n  \"status\": \"RECORDED\",\n  \"items\": \"#6 Bread and milk\",\n  \"amount\": 3200,\n  \"customerId\": \"{{cu_0789012347}}\",\n  \"shopkeeperId\": \"{{sk_0788222222}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 7 (REPAID)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-11-03\",\n  \"status\": \"REPAID\",\n  \"items\": \"#7 Soda crate\",\n  \"amount\": 8000,\n  \"customerId\": \"{{cu_0789012347}}\",\n  \"shopkeeperId\": \"{{sk_0788333333}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 8 (OVERDUE)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-11-10\",\n  \"status\": \"OVERDUE\",\n  \"items\": \"#8 Salt and tea leaves\",\n  \"amount\": 2500,\n  \"customerId\": \"{{cu_0789012348}}\",\n  \"shopkeeperId\": \"{{sk_0788333333}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 9 (RECORDED)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-11-15\",\n  \"status\": \"RECORDED\",\n  \"items\": \"#9 Candles and matches\",\n  \"amount\": 1800,\n  \"customerId\": \"{{cu_0789012349}}\",\n  \"shopkeeperId\": \"{{sk_0788222222}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Seed credit entry 10 (REPAID)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2026-11-20\",\n  \"status\": \"REPAID\",\n  \"items\": \"#10 Rice 10kg\",\n  \"amount\": 18000,\n  \"customerId\": \"{{cu_0789012348}}\",\n  \"shopkeeperId\": \"{{sk_0788111111}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Load ids (3)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });",
+                  "const b = pm.collectionVariables.get('base');",
+                  "const get = (p, f) => pm.sendRequest(b + p, (e, res) => { if (!e) f(res.json()); });",
+                  "const set = (k, v) => pm.collectionVariables.set(k, v);",
+                  "get('/api/product-lines/all', a => a.forEach(x => set('pl_' + x.name.replace(/ /g, '_'), x.id)));",
+                  "get('/api/shops/all', a => a.forEach(x => set('shop' + x.shopNumber, x.id)));",
+                  "get('/api/shopkeepers/all', a => a.forEach(x => set('sk_' + x.phone, x.id)));",
+                  "get('/api/customers/all', a => a.forEach(x => set('cu_' + x.phone, x.id)));",
+                  "get('/api/credit-entries/all', a => a.forEach(x => set(x.items.split(' ')[0].replace('#', 'ce'), x.id)));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shops/all",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shops",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "A",
+      "item": [
+        {
+          "name": "A2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.test(\"message\", function () { pm.expect(pm.response.text()).to.include(\"Customer saved successfully\"); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Test\",\n  \"lastName\": \"Customer\",\n  \"phone\": \"0780000001\",\n  \"village\": \"Kacyiru\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/customers/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "B",
+      "item": [
+        {
+          "name": "B1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/customers/by-last-name?lastName=rugema",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "by-last-name"
+              ],
+              "query": [
+                {
+                  "key": "lastName",
+                  "value": "rugema"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "B2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/by-status?status=RECORDED",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "by-status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "RECORDED"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "B3",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/between?start=2026-10-01&end=2026-10-31",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "between"
+              ],
+              "query": [
+                {
+                  "key": "start",
+                  "value": "2026-10-01"
+                },
+                {
+                  "key": "end",
+                  "value": "2026-10-31"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "item": [
+        {
+          "name": "C1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/by-product-line?name=grocer",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "by-product-line"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "grocer"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "C2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shops/free",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shops",
+                "free"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "C3",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/product-lines/unused",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "product-lines",
+                "unused"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "C4",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/customers/of-shopkeeper/{{sk_0788111111}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "of-shopkeeper",
+                "{{sk_0788111111}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "D",
+      "item": [
+        {
+          "name": "D1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const d = new Date();\r\nd.setDate(d.getDate() + 30);\r\npm.collectionVariables.set('futureDate', d.toISOString().slice(0, 10));"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"{{futureDate}}\",\n  \"status\": \"REPAID\",\n  \"items\": \"#99 D1 demo entry\",\n  \"amount\": 1000,\n  \"customerId\": \"{{cu_0789012349}}\",\n  \"shopkeeperId\": \"{{sk_0788111111}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/{{ce9}}/status?status=OVERDUE",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "{{ce9}}",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "OVERDUE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D3",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/{{sk_0788222222}}/product-lines/{{pl_Beverages}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "{{sk_0788222222}}",
+                "product-lines",
+                "{{pl_Beverages}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D4",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/{{sk_0788333333}}/shop?shopNumber=4",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "{{sk_0788333333}}",
+                "shop"
+              ],
+              "query": [
+                {
+                  "key": "shopNumber",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "E",
+      "item": [
+        {
+          "name": "E1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function () { pm.response.to.have.status(201); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"Mobile Money\",\n  \"note\": \"Paid in full\",\n  \"amountRwf\": 4500\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/repayments/save?creditEntryId={{ce3}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "repayments",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "creditEntryId",
+                  "value": "{{ce3}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "E2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });",
+                  "const l = pm.response.json(); if (l.length) { pm.collectionVariables.set(\"repId\", l[0].id); }"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/repayments/customer/0789012345",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "repayments",
+                "customer",
+                "0789012345"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "E3",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/repayments/delete/{{repId}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "repayments",
+                "delete",
+                "{{repId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "F",
+      "item": [
+        {
+          "name": "F1",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/stats/by-status",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "stats",
+                "by-status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "F2",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/cancel-day?shopkeeperId={{sk_0788111111}}&date=2026-10-20",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "cancel-day"
+              ],
+              "query": [
+                {
+                  "key": "shopkeeperId",
+                  "value": "{{sk_0788111111}}"
+                },
+                {
+                  "key": "date",
+                  "value": "2026-10-20"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bonus",
+      "item": [
+        {
+          "name": "+5 dashboard",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/dashboard/summary",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "dashboard",
+                "summary"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "+5 page",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/page?page=0&size=5&sort=entryDate,desc",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "page"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sort",
+                  "value": "entryDate,desc"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Error cases for the demo",
+      "item": [
+        {
+          "name": "A2 get by id 404",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/00000000-0000-0000-0000-000000000000",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "00000000-0000-0000-0000-000000000000"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D1 error 400 past date",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"2020-01-01\",\n  \"items\": \"#98 old\",\n  \"amount\": 500,\n  \"customerId\": \"{{cu_0789012349}}\",\n  \"shopkeeperId\": \"{{sk_0788111111}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D1 error 409 same shopkeeper same day (run after D1)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 409\", function () { pm.response.to.have.status(409); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entryDate\": \"{{futureDate}}\",\n  \"items\": \"#97 again\",\n  \"amount\": 500,\n  \"customerId\": \"{{cu_0789012349}}\",\n  \"shopkeeperId\": \"{{sk_0788111111}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/credit-entries/save",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "save"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D2 error 400 REPAID to RECORDED",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/{{ce3}}/status?status=RECORDED",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "{{ce3}}",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "RECORDED"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D2 error 404",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/00000000-0000-0000-0000-000000000000/status?status=OVERDUE",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "00000000-0000-0000-0000-000000000000",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "OVERDUE"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D3 error 409 already has it (run after D3)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 409\", function () { pm.response.to.have.status(409); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/{{sk_0788222222}}/product-lines/{{pl_Beverages}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "{{sk_0788222222}}",
+                "product-lines",
+                "{{pl_Beverages}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D3 error 404 shopkeeper",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/00000000-0000-0000-0000-000000000000/product-lines/{{pl_Beverages}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "00000000-0000-0000-0000-000000000000",
+                "product-lines",
+                "{{pl_Beverages}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D4 error 409 shop taken",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 409\", function () { pm.response.to.have.status(409); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/{{sk_0788111111}}/shop?shopNumber=2",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "{{sk_0788111111}}",
+                "shop"
+              ],
+              "query": [
+                {
+                  "key": "shopNumber",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "D4 error 404 shop",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/shopkeepers/{{sk_0788111111}}/shop?shopNumber=99",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "shopkeepers",
+                "{{sk_0788111111}}",
+                "shop"
+              ],
+              "query": [
+                {
+                  "key": "shopNumber",
+                  "value": "99"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "C4 error 404",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/customers/of-shopkeeper/00000000-0000-0000-0000-000000000000",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "of-shopkeeper",
+                "00000000-0000-0000-0000-000000000000"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "E1 error 400 not REPAID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"Mobile Money\",\n  \"note\": \"Paid in full\",\n  \"amountRwf\": 4500\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/repayments/save?creditEntryId={{ce1}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "repayments",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "creditEntryId",
+                  "value": "{{ce1}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "E1 error 404",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"Mobile Money\",\n  \"note\": \"Paid in full\",\n  \"amountRwf\": 4500\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}/api/repayments/save?creditEntryId=00000000-0000-0000-0000-000000000000",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "repayments",
+                "save"
+              ],
+              "query": [
+                {
+                  "key": "creditEntryId",
+                  "value": "00000000-0000-0000-0000-000000000000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "E3 error 404",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/repayments/delete/00000000-0000-0000-0000-000000000000",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "repayments",
+                "delete",
+                "00000000-0000-0000-0000-000000000000"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "E3 error 409 credit entry has repayments",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 409\", function () { pm.response.to.have.status(409); });"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.sendRequest({url: pm.collectionVariables.get('base') + '/api/repayments/save?creditEntryId=' + pm.collectionVariables.get('ce7'), method: 'POST', header: {'Content-Type': 'application/json'}, body: {mode: 'raw', raw: JSON.stringify({method: 'Cash', note: 'demo', amountRwf: 8000})}}, function () {});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/credit-entries/delete/{{ce7}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "credit-entries",
+                "delete",
+                "{{ce7}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "shop1",
+      "value": ""
+    },
+    {
+      "key": "shop2",
+      "value": ""
+    },
+    {
+      "key": "shop3",
+      "value": ""
+    },
+    {
+      "key": "shop4",
+      "value": ""
+    },
+    {
+      "key": "pl_Groceries",
+      "value": ""
+    },
+    {
+      "key": "pl_Beverages",
+      "value": ""
+    },
+    {
+      "key": "pl_Household_Goods",
+      "value": ""
+    },
+    {
+      "key": "pl_Airtime",
+      "value": ""
+    },
+    {
+      "key": "cu_0789012345",
+      "value": ""
+    },
+    {
+      "key": "cu_0789012346",
+      "value": ""
+    },
+    {
+      "key": "cu_0789012347",
+      "value": ""
+    },
+    {
+      "key": "cu_0789012348",
+      "value": ""
+    },
+    {
+      "key": "cu_0789012349",
+      "value": ""
+    },
+    {
+      "key": "sk_0788111111",
+      "value": ""
+    },
+    {
+      "key": "sk_0788222222",
+      "value": ""
+    },
+    {
+      "key": "sk_0788333333",
+      "value": ""
+    },
+    {
+      "key": "ce1",
+      "value": ""
+    },
+    {
+      "key": "ce2",
+      "value": ""
+    },
+    {
+      "key": "ce3",
+      "value": ""
+    },
+    {
+      "key": "ce4",
+      "value": ""
+    },
+    {
+      "key": "ce5",
+      "value": ""
+    },
+    {
+      "key": "ce6",
+      "value": ""
+    },
+    {
+      "key": "ce7",
+      "value": ""
+    },
+    {
+      "key": "ce8",
+      "value": ""
+    },
+    {
+      "key": "ce9",
+      "value": ""
+    },
+    {
+      "key": "ce10",
+      "value": ""
+    },
+    {
+      "key": "futureDate",
+      "value": ""
+    },
+    {
+      "key": "repId",
+      "value": ""
+    }
+  ]
+}
